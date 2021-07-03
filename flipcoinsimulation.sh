@@ -1,4 +1,7 @@
 #!/bin/bash -x
+
+#uc_1 and uc_2
+
 heads=0
 tails=0
 read -p "enter loop number : " n
@@ -16,6 +19,8 @@ done
 echo headscount=$heads
 echo tailscount=$tails
 
+#uc_3
+
 if (($heads > 21))
 then
 		echo "Heads won"
@@ -25,7 +30,6 @@ then
 else
 		echo "Tie"
 fi
-
 if(($heads>$tails))
 then
 	diff=$(($heads-$tails))
@@ -35,3 +39,16 @@ then
 	diff=$(($tails-$heads))
 	echo "Tails won by Heads more than $diff times"
 fi
+
+#uc_4
+
+H=$heads
+T=$tails
+#if (("$H" = "$T"))
+#then
+#	if (("$diff"<=2))
+#	then
+#		echo "Heads won by Tails more than $diff times"
+#		echo "Tails won by Heads more than $diff times"
+#	fi
+#fi
