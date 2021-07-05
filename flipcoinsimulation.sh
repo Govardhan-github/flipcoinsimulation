@@ -30,6 +30,7 @@ then
 else
 		echo "Tie"
 fi
+
 if(($heads>$tails))
 then
 	diff=$(($heads-$tails))
@@ -44,11 +45,25 @@ fi
 
 H=$heads
 T=$tails
-#if (("$H" = "$T"))
-#then
-#	if (("$diff"<=2))
-#	then
-#		echo "Heads won by Tails more than $diff times"
-#		echo "Tails won by Heads more than $diff times"
-#	fi
-#fi
+if (("$H" = "$T"))
+then
+	if (("$diff"<=2))
+	then
+		echo "Heads won by Tails more than $diff times"
+		echo "Tails won by Heads more than $diff times"
+	fi
+	while (($diff<=2))
+	do
+		flipcoin()
+
+	done
+	echo "if while done"
+	if [ $heads -gt $tails ]
+	then
+	        echo "Head Winner "
+	        print
+	elif [ $heads -lt $tails ]
+	then
+        	echo "Tail Winner "
+        	print
+fi
